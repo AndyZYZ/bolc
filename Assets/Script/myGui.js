@@ -1,19 +1,14 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿#pragma strict
+var U = 0.0;
+function Start () {
 
-public class myGUI : MonoBehaviour {
-	public float U=0;
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+}
 
-	void OnGUI()
+function Update () {
+
+}
+
+function OnGUI()
 	{
 		UnityEngine.GUILayout.Label ("欢迎使用the beauty of Liquid Crstal 液晶之美 Demo 1");
 		UnityEngine.GUILayout.Label ("本软件尚在开发阶段，你所看到的与最终版本可能有所区别");
@@ -28,9 +23,6 @@ public class myGUI : MonoBehaviour {
 		UnityEngine.GUILayout.Label ("通过QE键控制液晶分子偏转");
 		if (GUI.Button(new Rect(10,250,50,50),"退出"))
 		   Application.Quit();
-//		   U = GUI.VerticalScrollbar(new Rect(600,250,25,500), U, 0.1, 0, 10);
+		   U = GUI.VerticalScrollbar(Rect(700,235,10,114), U, 0.1, 10, 0);
+		   GUI.Label (Rect(680,210,100,20),"电压:"+U+"V");
 	}
-				
-
-
-}
